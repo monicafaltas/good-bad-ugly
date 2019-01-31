@@ -1,0 +1,185 @@
+<html>
+
+
+<body style="height: 150%; background: linear-gradient(90deg, #ffffff 50%, #000000 50%);">
+
+  <div style="position:relative;left:50%;right:400px;width: 500px;">
+
+      <p id="minus" style="
+    text-align: center; width: 100px; font-size:200px; margin-top: 100px; color:white;"> - </p>
+
+  </div>
+
+
+<div id="badpic" style="position:relative;left:50%;right:400px;width: 250px; visibility: hidden; top:-135px; left: 72.5%">
+<!--
+IF THE END OF THE WORLD IS HERE!!!
+<a href="./images/bad1.jpg">
+<img src="./images/bad1.jpg" style="width:100px;height:100px;">
+</a> -->
+
+<div class="image-container single-line">
+    <img  src="./images/bad1.jpg">
+</div>
+
+<div class="image-container">
+    <img src="./images/bad2.jpg">
+</div>
+
+<div class="image-container">
+    <img src="./images/bad2.5.jpg">
+</div>
+
+<div class="image-container">
+    <img class ="single-line" src="./images/bad3.jpg">
+</div>
+
+<div class="image-container">
+    <img class ="single-line" src="./images/bad4.jpg">
+</div>
+
+<div class="image-container">
+    <img class ="single-line" src="./images/bad5.jpg">
+</div>
+
+<div class="image-container">
+    <img class ="single-line" src="./images/bad6.jpg">
+</div>
+
+</div>
+
+
+<div style= "position:absolute; top:0px">
+      <p id="plus" style="text-align:center; font-size:150px"> + </p>
+</div>
+
+
+<div id="goodpic" style= "position:absolute;visibility: hidden; top:400px; width: 250px;">
+  <div class="image-container">
+      <img src="./images/good1.jpg">
+  </div>
+
+  <div class="image-container">
+      <img src="./images/good1.5.jpg">
+  </div>
+
+  <div class="image-container">
+      <img src="./images/good2.jpg">
+  </div>
+
+  <div class="image-container">
+      <img src="./images/good2.5.jpg">
+  </div>
+
+  <div class="image-container">
+      <img src="./images/good3.jpg">
+  </div>
+
+  <div class="image-container">
+      <img src="./images/good3.5.jpg">
+  </div>
+
+  <div class="image-container single-line">
+      <img src="./images/good4.jpg">
+  </div>
+
+  <div class="image-container single-line">
+      <img src="./images/good5.jpg">
+  </div>
+
+  <div class="image-container single-line">
+      <img src="./images/good6.jpg">
+  </div>
+
+</div>
+
+
+<style>
+
+#goodpic {
+  width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  left: 25%;
+  transform: translateX(-50%);
+
+}
+
+.image-container {
+  width: calc(50% - 2px);
+  margin-bottom: 4px;
+}
+
+.image-container img {
+  width: 100%;
+  height auto;
+}
+
+.single-line {
+  width: 100%;
+}
+
+.single-line img {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+#badpic {
+  width: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#badpic img {
+  width: 50%;
+  height: auto;
+}
+
+#singleline {}
+
+</style>
+
+
+
+</body>
+
+<script>
+document.getElementById('plus').addEventListener("click", function() {
+
+  if(document.getElementById('goodpic').style.visibility == "hidden"){
+  document.getElementById('goodpic').style.visibility = "visible"
+} else {
+  document.getElementById('goodpic').style.visibility = "hidden"
+}
+})
+
+document.getElementById('minus').addEventListener("click", function() {
+
+  if(document.getElementById('badpic').style.visibility == "hidden"){
+  document.getElementById('badpic').style.visibility = "visible"
+} else {
+  document.getElementById('badpic').style.visibility = "hidden"
+}
+})
+
+document.getElementById('minus').addEventListener("mouseover", function() {
+    document.getElementById('minus').style.color = "grey"
+})
+document.getElementById('minus').addEventListener("mouseout", function() {
+    document.getElementById('minus').style.color = "white"
+})
+
+document.getElementById('plus').addEventListener("mouseover", function() {
+    document.getElementById('plus').style.color = "grey"
+})
+document.getElementById('plus').addEventListener("mouseout", function() {
+    document.getElementById('plus').style.color = "black"
+})
+</script>
+
+
+
+</html>
